@@ -20,11 +20,11 @@ With these information in mind, lets open up [Wireshark](https://www.wireshark.o
 
 Sorting the network packets by length we notice 3 TCP packets that seems out of the norm in terms of length. Looking at packet no. 52, we can see a message in plain text addressing Alice.
 
-![CryptoChallengeStep1](./images/CryptoChallengeStep1.png)
+![CryptoChallengeStep1](./Images/CryptoChallengeStep1.png)
 
 Right click on the packet and click on follow > TCP Stream and you would see the following text pop up
 
-![CryptoChallengeTCPStream](./images/CryptoChallengeTCPStream.png)
+![CryptoChallengeTCPStream](./Images/CryptoChallengeTCPStream.png)
 
 ### Step 2
 
@@ -32,7 +32,7 @@ After reading the message you get another hint : **Diffie-Hellman**
 
 This is referring to the [Diffie-Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key exchange method. looking at the above image again, the public base (g), public prime (p), Alice's public key (g^a) and Bob's public key (g^b) is given to us. However to know the shared key between Alice and Bob we would need to figure out their secret Key, which is ... well secret (duh!). Let's look at the message again for further clues!
 
-Look at _p_, what do you think of it? _p_ is only 128 bits long !! based on the [Logjam attack](<https://en.wikipedia.org/wiki/Logjam_(computer_security)>), the key exchange algorithm with a public prime that is lower than 512 bits is easy to crack by solving the Discrete Logarithm between the public base, public key and the prime itself, this will result in the private key either sender or receiver depending on who we choose.
+Look at _p_, what do you think of it? _p_ is only 128 bits long !! based on the [Logjam attack](<https://en.wikipedia.org/wiki/Logjam_(computer_security)>), the key exchange algorithm with a public prime that is lower than 512 bits is easy to crack by solving the Discrete Logarithm between the public base, public key and the prime itself, this will result in the obtaining the private key of either sender or receiver depending on who we choose.
 
 ### Step 3
 
