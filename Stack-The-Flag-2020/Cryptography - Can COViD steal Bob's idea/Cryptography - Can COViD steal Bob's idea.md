@@ -41,7 +41,7 @@ We use the [Discrete logarithm calculator](https://www.alpertron.com.ar/DILOG.HT
     Alice's private key, a =  509793208876899184549867638120644839163
     Bob's private key, b =  462790561701400501839537914513170124551
 
-### Step 4 
+### Step 4
 
 with the private keys of Alice and Bob we can calculate the shared key between them and this would result in
 
