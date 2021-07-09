@@ -117,7 +117,7 @@ CTF_20324408a4e3f5c1d54d
 
 For the final flag, doing some quick googling about Amazon's "E-space Cloud Computing System" we deduce that we should be looking into the tags of the EC2 services associated with the AWS Id.
 
-Doing a quick look up of the AWS CLI documentation we can try to issue the following command 
+Doing a quick look up of the AWS CLI documentation we can try to issue the following command
 
 ```
 aws ec2 describe-tags
@@ -131,13 +131,12 @@ CTF_98f960b4d86bbcfe3fe1
 
 ![ec2 tags](res/ec2tag.jpg)
 
-
 ## Flags
 
 1. `CTF{0841862f273fd2ca20ea3b94a645781071ab19d7}` - 25 pts
 
 2. `CTF{9177a9c8bb1cd5c85934}` - 25pts
- 
+
 3. `CTF_855cc724fd34896c8875` - 25 pts
 
 4. `CTF_20324408a4e3f5c1d54d` - 25 pts
