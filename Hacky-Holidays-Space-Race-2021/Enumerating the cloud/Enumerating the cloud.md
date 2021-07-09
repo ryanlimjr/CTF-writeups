@@ -1,4 +1,4 @@
-# Locked out
+# Enumerating the Cloud
 
 ## Challenge type 
 
